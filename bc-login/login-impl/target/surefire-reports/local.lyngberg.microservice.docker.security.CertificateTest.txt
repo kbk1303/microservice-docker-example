@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: local.lyngberg.microservice.docker.security.CertificateTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.301 s <<< FAILURE! -- in local.lyngberg.microservice.docker.security.CertificateTest
+local.lyngberg.microservice.docker.security.CertificateTest.testLoginCertificateValidity -- Time elapsed: 0.196 s <<< ERROR!
+java.lang.RuntimeException: Ingen alias fundet i keystore
+	at local.lyngberg.microservice.docker.security.CertificateTest.findFirstAlias(CertificateTest.java:104)
+	at local.lyngberg.microservice.docker.security.CertificateTest.testLoginCertificateValidity(CertificateTest.java:90)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+

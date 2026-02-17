@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ProblemDetailsUtil.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">common-web</a> &gt; <a href="index.source.html" class="el_package">local.lyngberg.microservice.docker.interfaceadapters.web</a> &gt; <span class="el_source">ProblemDetailsUtil.java</span></div><h1>ProblemDetailsUtil.java</h1><pre class="source lang-java linenums">// Comments in English
+package local.lyngberg.microservice.docker.interfaceadapters.web;
+
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import java.util.*;
+
+import local.lyngberg.microservice.docker.sharedkernel.domain.common.ConflictException;
+
+public final class ProblemDetailsUtil {
+<span class="nc" id="L11">  private static final ObjectMapper MAPPER = new ObjectMapper();</span>
+
+  private ProblemDetailsUtil() {}
+
+<span class="nc" id="L15">  public record ParsedProblem(</span>
+      Integer status,
+      String type,
+      String detail,
+      String key,
+      Map&lt;String, Object&gt; args
+  ) {}
+
+  public static ParsedProblem parse(String body) {
+<span class="nc bnc" id="L24" title="All 4 branches missed.">    if (body == null || body.isBlank()) {</span>
+<span class="nc" id="L25">      return new ParsedProblem(null, null, null, null, Map.of());</span>
+    }
+    try {
+<span class="nc" id="L28">      JsonNode root = MAPPER.readTree(body);</span>
+<span class="nc" id="L29">      String key    = text(root, &quot;key&quot;);</span>
+<span class="nc" id="L30">      String type   = text(root, &quot;type&quot;);</span>
+<span class="nc" id="L31">      String detail = text(root, &quot;detail&quot;);</span>
+<span class="nc bnc" id="L32" title="All 4 branches missed.">      Integer status = (root.has(&quot;status&quot;) &amp;&amp; root.get(&quot;status&quot;).canConvertToInt())</span>
+<span class="nc" id="L33">          ? root.get(&quot;status&quot;).asInt() : null;</span>
+
+<span class="nc" id="L35">      Map&lt;String, Object&gt; args = toMap(root.get(&quot;args&quot;));</span>
+<span class="nc" id="L36">      return new ParsedProblem(status, type, detail, key, args);</span>
+<span class="nc" id="L37">    } catch (Exception ignore) {</span>
+<span class="nc" id="L38">      return new ParsedProblem(null, null, null, null, Map.of());</span>
+    }
+  }
+
+  public static ConflictException toConflictException(
+      String body,
+      String defaultKey,
+      Map&lt;String, Object&gt; defaultArgs
+  ) {
+<span class="nc" id="L47">    ParsedProblem p = parse(body);</span>
+<span class="nc bnc" id="L48" title="All 4 branches missed.">    String key = (p.key() != null &amp;&amp; !p.key().isBlank()) ? p.key() : defaultKey;</span>
+<span class="nc bnc" id="L49" title="All 4 branches missed.">    Map&lt;String, Object&gt; args = (p.args() != null &amp;&amp; !p.args().isEmpty())</span>
+<span class="nc" id="L50">        ? p.args()</span>
+<span class="nc bnc" id="L51" title="All 2 branches missed.">        : (defaultArgs != null ? defaultArgs : Map.of());</span>
+<span class="nc" id="L52">    return new ConflictException(key, args);</span>
+  }
+
+  // --- helpers ---
+
+  private static String text(JsonNode node, String field) {
+<span class="nc bnc" id="L58" title="All 4 branches missed.">    if (node == null || !node.hasNonNull(field)) return null;</span>
+<span class="nc" id="L59">    JsonNode v = node.get(field);</span>
+<span class="nc bnc" id="L60" title="All 2 branches missed.">    return v.isTextual() ? v.asText() : v.toString();</span>
+  }
+
+  private static Map&lt;String, Object&gt; toMap(JsonNode node) {
+<span class="nc bnc" id="L64" title="All 4 branches missed.">    if (node == null || !node.isObject()) return Collections.emptyMap();</span>
+<span class="nc" id="L65">    Map&lt;String, Object&gt; m = new LinkedHashMap&lt;&gt;();</span>
+    // Jackson 2.19+: iterate properties() set directly
+<span class="nc bnc" id="L67" title="All 2 branches missed.">    for (Map.Entry&lt;String, JsonNode&gt; e : node.properties()) {</span>
+<span class="nc" id="L68">      String k = e.getKey();</span>
+<span class="nc" id="L69">      JsonNode v = e.getValue();</span>
+<span class="nc bnc" id="L70" title="All 2 branches missed.">      Object val = v.isTextual() ? v.asText()</span>
+<span class="nc bnc" id="L71" title="All 2 branches missed.">                 : v.isNumber()  ? v.numberValue()</span>
+<span class="nc bnc" id="L72" title="All 2 branches missed.">                 : v.isBoolean() ? v.asBoolean()</span>
+<span class="nc bnc" id="L73" title="All 2 branches missed.">                 : v.isNull()    ? null</span>
+<span class="nc" id="L74">                 : v.toString();</span>
+<span class="nc" id="L75">      m.put(k, val);</span>
+<span class="nc" id="L76">    }</span>
+<span class="nc" id="L77">    return m;</span>
+  }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.14.202510111229</span></div></body></html>

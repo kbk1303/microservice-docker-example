@@ -1,0 +1,10 @@
+local/lyngberg/microservice/docker/sharedkernel/domain/common/NotFoundException.class
+local/lyngberg/microservice/docker/sharedkernel/domain/common/ConcurrencyException.class
+local/lyngberg/microservice/docker/sharedkernel/domain/common/valueobjects/utils/UUIDUtil.class
+local/lyngberg/microservice/docker/sharedkernel/domain/common/DomainException.class
+local/lyngberg/microservice/docker/sharedkernel/events/SagaOutcome.class
+local/lyngberg/microservice/docker/sharedkernel/domain/common/ValidationException.class
+local/lyngberg/microservice/docker/sharedkernel/domain/common/valueobjects/DomainId.class
+local/lyngberg/microservice/docker/sharedkernel/domain/common/Guards.class
+local/lyngberg/microservice/docker/sharedkernel/domain/common/ErrorCode.class
+local/lyngberg/microservice/docker/sharedkernel/domain/common/ConflictException.class

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Guards.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">shared-kernel</a> &gt; <a href="index.source.html" class="el_package">local.lyngberg.microservice.docker.sharedkernel.domain.common</a> &gt; <span class="el_source">Guards.java</span></div><h1>Guards.java</h1><pre class="source lang-java linenums">package local.lyngberg.microservice.docker.sharedkernel.domain.common;
+
+import java.util.Map;
+
+public final class Guards {
+
+    private Guards() {}
+
+
+     /**
+     * Guard that throws a domain-level DomainException using an i18n key.
+     * Extra args can be passed (e.g., field names) and will be surfaced in ProblemDetails.
+     * Protects record objects
+     */
+    public static &lt;T extends Record&gt; T requireRecordNonNull(
+            T value,
+            String messageKey,
+            String argKey,
+            String argVal) {
+        // Guard: if the record reference is null, throw a domain-level validation error
+<span class="fc bfc" id="L21" title="All 2 branches covered.">        if (value == null) {</span>
+            // Adapt to your DomainException signature:
+            // e.g. new DomainException(ErrorCode.VALIDATION, messageKey, Map.of(argKey, argVal))
+<span class="fc" id="L24">            throw new DomainException(ErrorCode.VALIDATION, messageKey, Map.of(argKey, argVal));</span>
+        }
+<span class="fc" id="L26">        return value;</span>
+    }
+
+    public static &lt;C&gt; C  requireNonNull(
+            C value,
+            String messageKey,
+            String argKey,
+            String argVal) {
+        // Guard: if the record reference is null, throw a domain-level validation error
+<span class="fc bfc" id="L35" title="All 2 branches covered.">        if (value == null) {</span>
+            // Adapt to your DomainException signature:
+            // e.g. new DomainException(ErrorCode.VALIDATION, messageKey, Map.of(argKey, argVal))
+<span class="fc" id="L38">            throw new DomainException(ErrorCode.VALIDATION, messageKey, Map.of(argKey, argVal));</span>
+        }
+<span class="fc" id="L40">        return value;</span>
+    }
+
+    /**
+     * Guard that throws a domain-level DomainException using an i18n key.
+     * Extra args can be passed (e.g., field names) and will be surfaced in ProblemDetails.
+     * Protects Enum
+     */
+    public static &lt;E extends Enum&lt;E&gt;&gt; E requireRecordNonNull(
+            E value,
+            String messageKey,
+            String argKey,
+            String argVal) {
+        // Guard: if the record reference is null, throw a domain-level validation error
+<span class="fc bfc" id="L54" title="All 2 branches covered.">        if (value == null) {</span>
+            // Adapt to your DomainException signature:
+            // e.g. new DomainException(ErrorCode.VALIDATION, messageKey, Map.of(argKey, argVal))
+<span class="fc" id="L57">            throw new DomainException(ErrorCode.VALIDATION, messageKey, Map.of(argKey, argVal));</span>
+        }
+<span class="fc" id="L59">        return value;</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.14.202510111229</span></div></body></html>

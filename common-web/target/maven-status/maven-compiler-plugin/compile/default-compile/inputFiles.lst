@@ -1,0 +1,4 @@
+/home/kris/java-projects/microservice-docker-example/common-web/src/main/java/local/lyngberg/microservice/docker/interfaceadapters/web/ConstraintKeyRegistry.java
+/home/kris/java-projects/microservice-docker-example/common-web/src/main/java/local/lyngberg/microservice/docker/interfaceadapters/web/EndpointExceptionHandler.java
+/home/kris/java-projects/microservice-docker-example/common-web/src/main/java/local/lyngberg/microservice/docker/interfaceadapters/web/ProblemDetailsUtil.java
+/home/kris/java-projects/microservice-docker-example/common-web/src/main/java/local/lyngberg/microservice/docker/interfaceadapters/web/i18nconfig/I18nAutoConfiguration.java

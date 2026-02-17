@@ -1,0 +1,5 @@
+/home/kris/java-projects/microservice-docker-example/common-web/src/test/java/local/lyngberg/microservice/docker/interfaceadapters/web/DummyController.java
+/home/kris/java-projects/microservice-docker-example/common-web/src/test/java/local/lyngberg/microservice/docker/interfaceadapters/web/EndpointExceptionHandlerIntegrationTest.java
+/home/kris/java-projects/microservice-docker-example/common-web/src/test/java/local/lyngberg/microservice/docker/interfaceadapters/web/TestApplication.java
+/home/kris/java-projects/microservice-docker-example/common-web/src/test/java/local/lyngberg/microservice/docker/interfaceadapters/web/TestConfig.java
+/home/kris/java-projects/microservice-docker-example/common-web/src/test/java/local/lyngberg/microservice/docker/interfaceadapters/web/i18nconfig/I18nAutoConfigurationTest.java

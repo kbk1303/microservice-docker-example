@@ -1,0 +1,10 @@
+/home/kris/java-projects/microservice-docker-example/shared-kernel/src/main/java/local/lyngberg/microservice/docker/sharedkernel/domain/common/ConcurrencyException.java
+/home/kris/java-projects/microservice-docker-example/shared-kernel/src/main/java/local/lyngberg/microservice/docker/sharedkernel/domain/common/ConflictException.java
+/home/kris/java-projects/microservice-docker-example/shared-kernel/src/main/java/local/lyngberg/microservice/docker/sharedkernel/domain/common/DomainException.java
+/home/kris/java-projects/microservice-docker-example/shared-kernel/src/main/java/local/lyngberg/microservice/docker/sharedkernel/domain/common/ErrorCode.java
+/home/kris/java-projects/microservice-docker-example/shared-kernel/src/main/java/local/lyngberg/microservice/docker/sharedkernel/domain/common/Guards.java
+/home/kris/java-projects/microservice-docker-example/shared-kernel/src/main/java/local/lyngberg/microservice/docker/sharedkernel/domain/common/NotFoundException.java
+/home/kris/java-projects/microservice-docker-example/shared-kernel/src/main/java/local/lyngberg/microservice/docker/sharedkernel/domain/common/ValidationException.java
+/home/kris/java-projects/microservice-docker-example/shared-kernel/src/main/java/local/lyngberg/microservice/docker/sharedkernel/domain/common/valueobjects/DomainId.java
+/home/kris/java-projects/microservice-docker-example/shared-kernel/src/main/java/local/lyngberg/microservice/docker/sharedkernel/domain/common/valueobjects/utils/UUIDUtil.java
+/home/kris/java-projects/microservice-docker-example/shared-kernel/src/main/java/local/lyngberg/microservice/docker/sharedkernel/events/SagaOutcome.java

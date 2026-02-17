@@ -1,0 +1,6 @@
+local/lyngberg/microservice/docker/interfaceadapters/web/EndpointExceptionHandler.class
+local/lyngberg/microservice/docker/interfaceadapters/web/EndpointExceptionHandler$1.class
+local/lyngberg/microservice/docker/interfaceadapters/web/i18nconfig/I18nAutoConfiguration.class
+local/lyngberg/microservice/docker/interfaceadapters/web/ProblemDetailsUtil.class
+local/lyngberg/microservice/docker/interfaceadapters/web/ConstraintKeyRegistry.class
+local/lyngberg/microservice/docker/interfaceadapters/web/ProblemDetailsUtil$ParsedProblem.class

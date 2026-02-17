@@ -1,0 +1,9 @@
+/home/kris/java-projects/microservice-docker-example/shared-kernel/src/test/java/local/lyngberg/microservice/docker/sharedkernel/domain/common/DetailExceptionsParameterizedTest.java
+/home/kris/java-projects/microservice-docker-example/shared-kernel/src/test/java/local/lyngberg/microservice/docker/sharedkernel/domain/common/DomainExceptionTest.java
+/home/kris/java-projects/microservice-docker-example/shared-kernel/src/test/java/local/lyngberg/microservice/docker/sharedkernel/domain/common/GuardsTest.java
+/home/kris/java-projects/microservice-docker-example/shared-kernel/src/test/java/local/lyngberg/microservice/docker/sharedkernel/domain/common/I18nMessagesConsistencyArchTest.java
+/home/kris/java-projects/microservice-docker-example/shared-kernel/src/test/java/local/lyngberg/microservice/docker/sharedkernel/domain/common/I18nUuidKeysTest.java
+/home/kris/java-projects/microservice-docker-example/shared-kernel/src/test/java/local/lyngberg/microservice/docker/sharedkernel/domain/common/NotFoundExceptionTest.java
+/home/kris/java-projects/microservice-docker-example/shared-kernel/src/test/java/local/lyngberg/microservice/docker/sharedkernel/domain/common/SubclassExceptionsTest.java
+/home/kris/java-projects/microservice-docker-example/shared-kernel/src/test/java/local/lyngberg/microservice/docker/sharedkernel/domain/common/valueobjects/utils/UUIDUtilTest.java
+/home/kris/java-projects/microservice-docker-example/shared-kernel/src/test/java/local/lyngberg/microservice/docker/sharedkernel/events/SagaOutcomeTest.java
