@@ -1,6 +1,0 @@
-GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
-common-web,local.lyngberg.microservice.docker.interfaceadapters.web,EndpointExceptionHandler,85,418,27,28,20,82,25,26,1,19
-common-web,local.lyngberg.microservice.docker.interfaceadapters.web,ProblemDetailsUtil.ParsedProblem,18,0,0,0,1,0,1,0,1,0
-common-web,local.lyngberg.microservice.docker.interfaceadapters.web,ProblemDetailsUtil,199,0,38,0,35,0,24,0,5,0
-common-web,local.lyngberg.microservice.docker.interfaceadapters.web,ConstraintKeyRegistry,12,26,2,0,2,6,2,1,1,1
-common-web,local.lyngberg.microservice.docker.interfaceadapters.web.i18nconfig,I18nAutoConfiguration,0,23,0,0,0,6,0,2,0,2

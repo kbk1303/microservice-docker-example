@@ -1,6 +1,0 @@
-local/lyngberg/microservice/docker/interfaceadapters/web/DummyController.class
-local/lyngberg/microservice/docker/interfaceadapters/web/DummyController$CreateReq.class
-local/lyngberg/microservice/docker/interfaceadapters/web/TestConfig.class
-local/lyngberg/microservice/docker/interfaceadapters/web/EndpointExceptionHandlerIntegrationTest.class
-local/lyngberg/microservice/docker/interfaceadapters/web/i18nconfig/I18nAutoConfigurationTest.class
-local/lyngberg/microservice/docker/interfaceadapters/web/TestApplication.class

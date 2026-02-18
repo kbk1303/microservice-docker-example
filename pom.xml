@@ -13,9 +13,13 @@
     <modules>
         <module>bc-login/login-api</module>
         <module>bc-login/login-impl</module>
+        <module>bc-auditlog/auditlog-api</module>
+        <module>bc-auditlog/auditlog-impl</module>
         <module>common-web</module>
         <module>shared-kernel</module>
     </modules>
+       
+
 
       <!-- ===== Properties ===== -->
     <properties>

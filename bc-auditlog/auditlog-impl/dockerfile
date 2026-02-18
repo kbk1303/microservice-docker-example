@@ -1,0 +1,17 @@
+# ---- Build (if you prefer multi-stage, keep Maven here) ----
+# FROM maven:3.9-eclipse-temurin-21 AS build
+# WORKDIR /app
+# COPY . /app
+# RUN mvn -q -DskipTests package
+
+# ---- Runtime ----
+FROM eclipse-temurin:21-jre
+WORKDIR /app
+# If you used multi-stage, copy from /app/target/*.jar
+ARG JAR_FILE=target/login-impl-*.jar
+COPY ${JAR_FILE} app.jar
+# TLS mount point
+RUN mkdir -p /tls
+ENV JAVA_OPTS=""
+EXPOSE 9081
+ENTRYPOINT ["sh","-c","java $JAVA_OPTS -jar /app/app.jar"]
