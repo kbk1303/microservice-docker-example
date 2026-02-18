@@ -1,3 +1,4 @@
 /home/kris/java-projects/microservice-docker-example/bc-auditlog/auditlog-impl/src/main/java/local/lyngberg/microservice/docker/auditlog/AuditlogStartApplication.java
 /home/kris/java-projects/microservice-docker-example/bc-auditlog/auditlog-impl/src/main/java/local/lyngberg/microservice/docker/auditlog/config/security/InternalMtlsProps.java
 /home/kris/java-projects/microservice-docker-example/bc-auditlog/auditlog-impl/src/main/java/local/lyngberg/microservice/docker/auditlog/config/security/SecurityConfig.java
+/home/kris/java-projects/microservice-docker-example/bc-auditlog/auditlog-impl/src/main/java/local/lyngberg/microservice/docker/auditlog/interfaceadapters/persistence/jpa/AuditlogEntity.java

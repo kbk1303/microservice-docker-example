@@ -1,3 +1,6 @@
 /home/kris/java-projects/microservice-docker-example/bc-login/login-impl/src/main/java/local/lyngberg/microservice/docker/login/LoginStartApplication.java
 /home/kris/java-projects/microservice-docker-example/bc-login/login-impl/src/main/java/local/lyngberg/microservice/docker/login/config/security/InternalMtlsProps.java
 /home/kris/java-projects/microservice-docker-example/bc-login/login-impl/src/main/java/local/lyngberg/microservice/docker/login/config/security/SecurityConfig.java
+/home/kris/java-projects/microservice-docker-example/bc-login/login-impl/src/main/java/local/lyngberg/microservice/docker/login/interfaceadapters/persistence/jpa/UserEntity.java
+/home/kris/java-projects/microservice-docker-example/bc-login/login-impl/src/main/java/local/lyngberg/microservice/docker/login/interfaceadapters/persistence/jpa/UserRoleEntity.java
+/home/kris/java-projects/microservice-docker-example/bc-login/login-impl/src/main/java/local/lyngberg/microservice/docker/login/interfaceadapters/persistence/jpa/UserSessionEntity.java

@@ -1,4 +1,4 @@
 META-INF/spring-configuration-metadata.json
 local/lyngberg/microservice/docker/login/config/security/SecurityConfig.class
-local/lyngberg/microservice/docker/login/config/security/InternalMtlsProps.class
 local/lyngberg/microservice/docker/login/LoginStartApplication.class
+local/lyngberg/microservice/docker/login/config/security/InternalMtlsProps.class
